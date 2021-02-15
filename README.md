@@ -1,1 +1,1 @@
-# https://Egor-bog.github.io/Demo_lending
+# https://egor-bog.github.io/demo_lending
