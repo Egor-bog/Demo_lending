@@ -1,27 +1,38 @@
 $(document).ready(function(){
-    $('.bxslider-four').bxSlider({
-        infiniteLoop: false,
-        hideControlOnEnd: true,
-        minSlides: 1,
-        maxSlides: 3,
-        slideWidth: 360,
-        slideMargin: 10,
-        nextText: '',
-        prevText: '',
-        nextSelector: '.four-conteiner-slyder__next',
-        prevSelector: '.four-conteiner-slyder__prev',
-        pager: false,
+    $('.four-conteiner-slyder__block').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: '.four-conteiner-slyder__next',
+        prevArrow: '.four-conteiner-slyder__prev',
+        infinite: true,
+            responsive: [
+                {
+                breakpoint: 1080,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    
+                }
+                },
+                {
+                    breakpoint: 730,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        
+                    }
+                    },
+            ]
+
+
     });
-    $('.portfolio-slider').bxSlider({
-        infiniteLoop: false,
-        hideControlOnEnd: true,
-        minSlides: 1,
-        maxSlides: 6,
-        slideWidth: 430,
-        slideMargin: 0,
-        pager: true,
-        // ticker: true,
-        // speed: 30000,
+    $('.portfolio-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        variableWidth: true
+
     });
 
     
